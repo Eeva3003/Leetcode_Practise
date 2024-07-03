@@ -17,6 +17,8 @@ class Solution:
             
             # Step 5: Get all adjacent vertices of the popped vertex
             # If an adjacent vertex has not been visited, mark it visited and push it onto the stack
+            #Reversing ensures that if there is a specific order required or if the adjacency list is given in a sorted order (e.g., increasing vertex numbers), 
+            #that order is preserved during traversal. This can be important in certain applications where the order of visiting nodes matters.
             for neighbour in reversed(adj[vertex]):
                 if not visited_arr[neighbour]:
                     stack.append(neighbour)
